@@ -23,6 +23,7 @@ public class NetworkServices {
 
     public void initUser(){
         //初始化本地登录的用户
+
     }
 
     public void punch(String username, String punchPic){

@@ -7,8 +7,26 @@ import java.sql.Time;
 public class Habit {
     public Time startTime; //开始时间
     public Time endingTime; //结束时间
+
+    public String getHabitName() {
+        return habitName;
+    }
+
+    public void setHabitName(String habitName) {
+        this.habitName = habitName;
+    }
+
     public String habitName="未命名习惯"; //习惯名称
     public int habitTag=-1; //标记习惯的tag
+
+    public String getRequest() {
+        return request;
+    }
+
+    public void setRequest(String request) {
+        this.request = request;
+    }
+
     public String request="暂无要求"; //要求
     public String cycle; //打卡周期
     public String testCycle; //测评周期

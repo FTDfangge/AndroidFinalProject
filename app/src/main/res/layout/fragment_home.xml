@@ -60,11 +60,12 @@
 
     <TextView
         android:id="@+id/HabitTextView"
-        android:layout_width="306dp"
-        android:layout_height="27dp"
+        android:layout_width="267dp"
+        android:layout_height="28dp"
         android:layout_marginTop="20dp"
         android:text="您正在养成的习惯为："
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

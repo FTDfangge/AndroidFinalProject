@@ -17,18 +17,23 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.androidfinalproject.MainActivity;
 import com.example.androidfinalproject.PunchActivity;
+import com.example.androidfinalproject.PunchRecordListActivity;
 import com.example.androidfinalproject.R;
+import com.example.androidfinalproject.Class.User;
+
+import static com.example.androidfinalproject.Class.User.localuser;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    private int numOfPunches=30;
-    TextView numOfPunchesTextView;
+    private int numOfPunches;
+    TextView numOfPunchesTextView,habitTextView;
     private int time;
-    Button punchBtn;
+    Button punchBtn,recordBtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        numOfPunches = localuser.getNumOfPunches();
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -42,6 +47,9 @@ public class HomeFragment extends Fragment {
         numOfPunchesTextView = root.findViewById(R.id.numberOfPunchTextView);
         MyTimer myTimer = new MyTimer();
         myTimer.start();
+
+        habitTextView = root.findViewById(R.id.HabitTextView);
+        habitTextView.append(localuser.getMyHabit().getHabitName());
         final Context context = this.getContext();
         punchBtn = root.findViewById(R.id.PunchButton);
         punchBtn.setOnClickListener(new View.OnClickListener() {
@@ -51,8 +59,18 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        recordBtn = root.findViewById(R.id.RecordButton);
+        recordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PunchRecordListActivity.class);
+                startActivity(intent);
+            }
+        });
         return root;
     }
+
     class MyTimer extends Thread{
         @Override
         public void run(){
@@ -61,7 +79,18 @@ public class HomeFragment extends Fragment {
                 time += 1;
                 numOfPunchesTextView.setText(Integer.toString(time));
                 try {
-                    Thread.currentThread().sleep(50);
+                    if (numOfPunches <= 20) {
+                        if (time > numOfPunches / 2)
+                            Thread.currentThread().sleep((time - numOfPunches / 2) * 16000 / (numOfPunches * numOfPunches));
+                        else
+                            Thread.currentThread().sleep(2000 / numOfPunches);
+                    }
+                    else
+                        if (numOfPunches-time >10){
+                            Thread.currentThread().sleep(1000/(numOfPunches-10));
+                        }
+                        else
+                            Thread.currentThread().sleep((10-numOfPunches+time)*2500/55);
                 } catch (InterruptedException e) {
 
                 }

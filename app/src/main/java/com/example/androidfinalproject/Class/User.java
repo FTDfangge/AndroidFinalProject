@@ -3,9 +3,11 @@ package com.example.androidfinalproject.Class;
 import android.media.Image;
 
 public class User {
-    public static User user = new User();
+    public static User localuser = new User();
     private String username,password;
     private String nickName,punchTime,punchDescription;
+    private Habit myHabit = new Habit();
+    private int numOfPunches = 0;
 
     public String getUsername() {
         return username;
@@ -66,7 +68,7 @@ public class User {
     private int iconImage,punchImage;
 
     public User() {
-
+        myHabit.setHabit("按时作息");
     }
 
     public User(String it1, String it2,String it3, int imageID, int imageID2){
@@ -77,6 +79,20 @@ public class User {
         this.punchImage = imageID2;
     }
 
+    public Habit getMyHabit() {
+        return myHabit;
+    }
 
+    public void setMyHabit(Habit myHabit) {
+        this.myHabit = myHabit;
+    }
+
+    public int getNumOfPunches() {
+        return numOfPunches;
+    }
+
+    public void setNumOfPunches(int numOfPunches) {
+        this.numOfPunches = numOfPunches;
+    }
 }
 
