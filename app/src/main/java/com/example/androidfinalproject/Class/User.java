@@ -7,7 +7,7 @@ public class User {
     private String username,password;
     private String nickName,punchTime,punchDescription;
     private Habit myHabit = new Habit();
-    private int numOfPunches = 0;
+    private int numOfPunches = 975;
 
     public String getUsername() {
         return username;

@@ -44,7 +44,7 @@ public class DashboardFragment extends Fragment {
             }
         });
         Context context = this.getContext();
-        momentList = networkServices.getMomentList();
+        momentList = networkServices.getTestMomentList();
         UsersAdapter adapter = new UsersAdapter(context,R.layout.item,momentList);
         ListView listView = root.findViewById(R.id.list);
         listView.setAdapter(adapter);

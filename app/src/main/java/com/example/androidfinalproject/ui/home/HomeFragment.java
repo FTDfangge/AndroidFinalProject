@@ -79,7 +79,11 @@ public class HomeFragment extends Fragment {
                 time += 1;
                 numOfPunchesTextView.setText(Integer.toString(time));
                 try {
-                    if (numOfPunches <= 20) {
+                    if (numOfPunches <=5 ){
+                        Thread.currentThread().sleep(200);
+                    }
+
+                    else if (numOfPunches <= 20) {
                         if (time > numOfPunches / 2)
                             Thread.currentThread().sleep((time - numOfPunches / 2) * 16000 / (numOfPunches * numOfPunches));
                         else
