@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themes">
+        <item>请选择</item>
+        <item>定量喝水</item>
+        <item>按时早餐</item>
+        <item>规律作息</item>
+        <item>阅读打卡</item>
+        <item>单词打卡</item>
+        <item>运动打卡</item>
+        <item>戒不良习惯</item>
+    </string-array>
+</resources>

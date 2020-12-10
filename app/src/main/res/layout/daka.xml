@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1">
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="192dp"
+        android:background="@color/color2"
+        android:text="提交打卡"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="315dp"
+        android:layout_height="427dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/color2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="打卡主题：" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="230dp"
+                android:layout_height="30dp"
+                android:entries="@array/themes"
+                android:scrollbarThumbHorizontal="@color/colorAccent"
+                android:scrollbarThumbVertical="@color/colorAccent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="打卡时间：" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="183dp"
+                android:layout_height="42dp"
+                android:text="2020/09/09/22:33" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="打卡说明：" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="xxxxxxxx" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="添加图片：" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="123.jpg" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="50dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="160dp"
+        android:background="@color/color1"
+        android:text="选择"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
