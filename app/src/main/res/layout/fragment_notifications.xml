@@ -19,4 +19,143 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="239dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic2" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/ic1" />
+
+        <TableLayout
+            android:layout_width="160dp"
+            android:layout_height="87dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="108dp"
+            android:layout_marginEnd="24dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tname"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#99FFEBCD"
+
+                    android:text="姓名：" />
+
+                <TextView
+                    android:id="@+id/tusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#99FFEBCD"
+                    android:text="小明" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#99FFEBCD"
+                    android:text="学号："
+                    tools:layout_editor_absoluteX="205dp"
+                    tools:layout_editor_absoluteY="149dp" />
+
+                <TextView
+                    android:id="@+id/tuserno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#99FFEBCD"
+                    android:text="18309999" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="295dp"
+            android:layout_height="333dp"
+            android:layout_below="@+id/imageButton4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color1"
+
+                android:drawableRight="@android:drawable/ic_menu_manage"
+                android:gravity="center_vertical"
+                android:text="设置" />
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color1"
+                android:drawableRight="@android:drawable/ic_menu_gallery"
+                android:gravity="center_vertical"
+                android:text="相册" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color1"
+                android:drawableRight="@android:drawable/ic_menu_month"
+                android:gravity="center_vertical"
+                android:text="打卡日历" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color1"
+                android:drawableRight="@android:drawable/ic_menu_help"
+                android:gravity="center_vertical"
+                android:text="打卡规则" />
+        </LinearLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
