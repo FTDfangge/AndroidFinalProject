@@ -1,5 +1,6 @@
 package com.example.androidfinalproject.ui.dashboard;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +14,20 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.androidfinalproject.Class.Moment;
 import com.example.androidfinalproject.Class.User;
 import com.example.androidfinalproject.R;
 import com.example.androidfinalproject.UsersAdapter;
+import com.example.androidfinalproject.Network.NetworkServices;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.androidfinalproject.Network.NetworkServices.networkServices;
+
 public class DashboardFragment extends Fragment {
-    List<User> userList = null;
+
+    List<Moment> momentList = new ArrayList<Moment>();
 
     private DashboardViewModel dashboardViewModel;
 
@@ -36,8 +43,9 @@ public class DashboardFragment extends Fragment {
                 textView.setText(s);
             }
         });
-
-        UsersAdapter adapter = new UsersAdapter(getActivity().getApplicationContext(),R.layout.item,userList);
+        Context context = this.getContext();
+        momentList = networkServices.getMomentList();
+        UsersAdapter adapter = new UsersAdapter(context,R.layout.item,momentList);
         ListView listView = root.findViewById(R.id.list);
         listView.setAdapter(adapter);
         return root;

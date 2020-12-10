@@ -10,24 +10,25 @@ import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.androidfinalproject.Class.Moment;
 import com.example.androidfinalproject.Class.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersAdapter extends ArrayAdapter<User> {
+public class UsersAdapter extends ArrayAdapter<Moment> {
     private int resourceID;
 
 
-    public UsersAdapter(Context context, int resource, List<User> users){
-        super(context,resource,users);
+    public UsersAdapter(Context context, int resource, List<Moment> moments){
+        super(context,resource,moments);
         resourceID = resource;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         View view;
-        User users = getItem(position);
+        Moment moment = getItem(position);
         if(convertView == null){
             view = LayoutInflater.from(getContext()).inflate(resourceID, null);
         }
@@ -38,11 +39,11 @@ public class UsersAdapter extends ArrayAdapter<User> {
         TextView userName = (TextView)view.findViewById(R.id.it1);
         TextView userTime = (TextView)view.findViewById(R.id.it2);
         TextView userText = (TextView)view.findViewById(R.id.it3);
-        userImage.setImageResource(users.getIconImage());
-        userImage.setImageResource(users.getPunchImage());
-        userName.setText(users.getNickName());
-        userTime.setText(users.getPunchTime());
-        userText.setText(users.getPunchDescription());
+        userImage.setImageResource(moment.getUserIcon());
+        userImage.setImageResource(moment.getPunchImage());
+        userName.setText(moment.getNickName());
+        userTime.setText(moment.getPunchTime());
+        userText.setText(moment.getPunchDescription());
         return view;
     }
 
