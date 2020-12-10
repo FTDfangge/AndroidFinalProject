@@ -1,9 +1,12 @@
 package com.example.androidfinalproject.ui.home;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.androidfinalproject.MainActivity;
+import com.example.androidfinalproject.PunchActivity;
 import com.example.androidfinalproject.R;
 
 public class HomeFragment extends Fragment {
@@ -20,6 +25,7 @@ public class HomeFragment extends Fragment {
     private int numOfPunches=30;
     TextView numOfPunchesTextView;
     private int time;
+    Button punchBtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -36,6 +42,15 @@ public class HomeFragment extends Fragment {
         numOfPunchesTextView = root.findViewById(R.id.numberOfPunchTextView);
         MyTimer myTimer = new MyTimer();
         myTimer.start();
+        final Context context = this.getContext();
+        punchBtn = root.findViewById(R.id.PunchButton);
+        punchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PunchActivity.class);
+                startActivity(intent);
+            }
+        });
         return root;
     }
     class MyTimer extends Thread{
