@@ -3,39 +3,80 @@ package com.example.androidfinalproject.Class;
 import android.media.Image;
 
 public class User {
+    public static User user = new User();
+    private String username,password;
+    private String nickName,punchTime,punchDescription;
 
-    private String it1,it2,it3;
-    private int imageID,imageID2;
-
-    public User(String s, String it1, String it2, int imageID, int imageID2){
-        this.it1 = it1;
-        this.it2 = it2;
-        this.it3 = it3;
-        this.imageID = imageID;
-        this.imageID2 = imageID2;
+    public String getUsername() {
+        return username;
     }
 
-
-
-    public String getName(){
-        return it1;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getTime(){
-        return it2;
+    public String getPassword() {
+        return password;
     }
 
-    public String getText(){
-        return it3;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public int getImageID(){
-        return imageID;
+    public String getNickName() {
+        return nickName;
     }
 
-    public int getImageID2(){
-        return imageID2;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
+
+    public String getPunchTime() {
+        return punchTime;
+    }
+
+    public void setPunchTime(String punchTime) {
+        this.punchTime = punchTime;
+    }
+
+    public String getPunchDescription() {
+        return punchDescription;
+    }
+
+    public void setPunchDescription(String punchDescription) {
+        this.punchDescription = punchDescription;
+    }
+
+    public int getIconImage() {
+        return iconImage;
+    }
+
+    public void setIconImage(int iconImage) {
+        this.iconImage = iconImage;
+    }
+
+    public int getPunchImage() {
+        return punchImage;
+    }
+
+    public void setPunchImage(int punchImage) {
+        this.punchImage = punchImage;
+    }
+
+    private int iconImage,punchImage;
+
+    public User() {
+
+    }
+
+    public User(String it1, String it2,String it3, int imageID, int imageID2){
+        this.nickName = it1;
+        this.punchTime = it2;
+        this.punchDescription = it3;
+        this.iconImage = imageID;
+        this.punchImage = imageID2;
+    }
+
 
 }
 

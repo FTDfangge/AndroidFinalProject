@@ -38,11 +38,11 @@ public class UsersAdapter extends ArrayAdapter<User> {
         TextView userName = (TextView)view.findViewById(R.id.it1);
         TextView userTime = (TextView)view.findViewById(R.id.it2);
         TextView userText = (TextView)view.findViewById(R.id.it3);
-        userImage.setImageResource(users.getImageID());
-        userImage.setImageResource(users.getImageID2());
-        userName.setText(users.getName());
-        userTime.setText(users.getTime());
-        userText.setText(users.getText());
+        userImage.setImageResource(users.getIconImage());
+        userImage.setImageResource(users.getPunchImage());
+        userName.setText(users.getNickName());
+        userTime.setText(users.getPunchTime());
+        userText.setText(users.getPunchDescription());
         return view;
     }
 

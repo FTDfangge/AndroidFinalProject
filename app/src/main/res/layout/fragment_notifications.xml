@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color1"
     tools:context=".ui.notifications.NotificationsFragment">
 
     <TextView
@@ -20,7 +21,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="493dp"
+        android:layout_height="518dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/main_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constrainedHeight="false"
@@ -29,21 +42,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="239dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/ic2" />
-
-        <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="61dp"
             android:src="@drawable/ic1" />
 
         <TableLayout
@@ -52,8 +57,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="108dp"
-            android:layout_marginEnd="24dp">
+            android:layout_marginTop="77dp"
+            android:layout_marginEnd="29dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -114,9 +119,9 @@
         <LinearLayout
             android:layout_width="295dp"
             android:layout_height="333dp"
-            android:layout_below="@+id/imageButton4"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="300dp"
             android:orientation="vertical">
 
             <Button
@@ -127,7 +132,8 @@
 
                 android:drawableRight="@android:drawable/ic_menu_manage"
                 android:gravity="center_vertical"
-                android:text="设置" />
+                android:text="设置"
+                android:textColor="#FFFFFF" />
 
 
             <Button
@@ -137,7 +143,8 @@
                 android:backgroundTint="@color/color1"
                 android:drawableRight="@android:drawable/ic_menu_gallery"
                 android:gravity="center_vertical"
-                android:text="相册" />
+                android:text="相册"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button3"
@@ -146,7 +153,8 @@
                 android:backgroundTint="@color/color1"
                 android:drawableRight="@android:drawable/ic_menu_month"
                 android:gravity="center_vertical"
-                android:text="打卡日历" />
+                android:text="打卡日历"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button5"
@@ -155,7 +163,11 @@
                 android:backgroundTint="@color/color1"
                 android:drawableRight="@android:drawable/ic_menu_help"
                 android:gravity="center_vertical"
-                android:text="打卡规则" />
+                android:text="打卡规则"
+                android:textColor="#FFFFFF" />
+
+
         </LinearLayout>
+
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
