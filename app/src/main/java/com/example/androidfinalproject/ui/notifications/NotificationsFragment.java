@@ -15,13 +15,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.androidfinalproject.PunchRecordListActivity;
 import com.example.androidfinalproject.R;
 import com.example.androidfinalproject.SettingsActivity;
 
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
-    Button settingsBtn;
+    Button settingsBtn,calenderBtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +43,15 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        calenderBtn = root.findViewById(R.id.button3);
+        calenderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PunchRecordListActivity.class);
                 startActivity(intent);
             }
         });
