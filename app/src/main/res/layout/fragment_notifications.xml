@@ -7,6 +7,16 @@
     android:background="@color/color1"
     tools:context=".ui.notifications.NotificationsFragment">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="199dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/main_back2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
     <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"
@@ -25,22 +35,12 @@
         android:id="@+id/imageView"
         android:layout_width="493dp"
         android:layout_height="518dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="180dp"
         android:src="@drawable/main_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="199dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="172dp"
-        android:src="@drawable/main_back2"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -80,13 +80,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="姓名：" />
+                    android:text="姓名："
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                 <TextView
                     android:id="@+id/tusername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="小明" />
+                    android:text="小明"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
             </TableRow>
 
@@ -100,13 +102,15 @@
                     android:layout_height="wrap_content"
                     android:text="学号："
                     tools:layout_editor_absoluteX="205dp"
-                    tools:layout_editor_absoluteY="149dp" />
+                    tools:layout_editor_absoluteY="149dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 <TextView
                     android:id="@+id/tuserno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="18309999" />
+                    android:text="18309999"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
             </TableRow>
 
             <TableRow

@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/it_image"
-        android:layout_width="60dp"
+        android:layout_width="21dp"
 
         android:layout_height="60dp"
         android:layout_weight="1" />
@@ -25,25 +25,28 @@
             android:id="@+id/it1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:textColor="#3F51B5"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/it2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/it3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_height="69dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/it_image2"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_weight="1" />
+            />
     </LinearLayout>
 
 </LinearLayout>

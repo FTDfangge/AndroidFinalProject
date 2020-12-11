@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity"
     android:background="@color/color1">
+
     <LinearLayout
-        android:layout_width="339dp"
-        android:layout_height="614dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="401dp"
+        android:layout_height="258dp"
         android:layout_marginTop="16dp"
         android:background="@color/color1"
         android:orientation="vertical"
@@ -58,4 +60,5 @@
             android:text="不在圈子显示我的打卡" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
