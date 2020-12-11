@@ -33,14 +33,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="493dp"
-        android:layout_height="518dp"
-        android:layout_marginTop="180dp"
+        android:layout_width="480dp"
+        android:layout_height="410dp"
+        android:layout_marginBottom="35dp"
         android:src="@drawable/main_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -48,8 +47,7 @@
         android:layout_height="match_parent"
         app:layout_constrainedHeight="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -88,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="小明"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             </TableRow>
 
@@ -101,16 +99,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="学号："
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     tools:layout_editor_absoluteX="205dp"
-                    tools:layout_editor_absoluteY="149dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    tools:layout_editor_absoluteY="149dp" />
 
                 <TextView
                     android:id="@+id/tuserno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="18309999"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
             </TableRow>
 
             <TableRow
@@ -131,7 +129,7 @@
             android:layout_height="333dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="350dp"
             android:orientation="vertical">
 
             <Button
