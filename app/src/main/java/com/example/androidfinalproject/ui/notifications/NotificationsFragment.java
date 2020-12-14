@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.androidfinalproject.LoginActivity;
 import com.example.androidfinalproject.PunchRecordListActivity;
 import com.example.androidfinalproject.R;
 import com.example.androidfinalproject.SettingsActivity;
@@ -22,7 +23,7 @@ import com.example.androidfinalproject.SettingsActivity;
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
-    Button settingsBtn,calenderBtn;
+    Button settingsBtn,calenderBtn,loginBtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -52,6 +53,15 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PunchRecordListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        loginBtn = root.findViewById(R.id.button9);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, LoginActivity.class);
                 startActivity(intent);
             }
         });

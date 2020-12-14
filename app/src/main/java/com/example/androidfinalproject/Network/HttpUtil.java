@@ -17,25 +17,25 @@ import okhttp3.RequestBody;
 public class HttpUtil {
 
     //注册的网址
-    private static final String REGISTER_URL = "http://172.24.56.83:8080/register";
+    private static final String REGISTER_URL = "http://localhost:8080/register";
     //登录的网址
-    private static final String LOGIN_URL = "http://172.24.56.83:8080/login";
+    private static final String LOGIN_URL = "http://localhost:8080/login";
     //请求发送验证码的网址
-    private static final String VALID_URL = "http://172.24.56.83:8080/valid";
+    private static final String VALID_URL = "http://localhost:8080/valid";
     //打卡的网址
-    private static final String PUNCH_URL = "http://172.24.56.83:8080/punch";
+    private static final String PUNCH_URL = "http://localhost:8080/punch";
     //自己打卡记录的网址
-    private static final String PUNCH_INFO_URL = "http://172.24.56.83:8080/punchInfo";
+    private static final String PUNCH_INFO_URL = "http://localhost:8080/punchInfo";
     //圈子的网址
-    private static final String CIRCLE_URL = "http://172.24.56.83:8080/circle";
+    private static final String CIRCLE_URL = "http://localhost:8080/circle";
     //评论的网址
-    private static final String COMMENT_URL = "http://172.24.56.83:8080/comment";
+    private static final String COMMENT_URL = "http://localhost:8080/comment";
     //点赞的网址
-    private static final String LIKE_URL = "http://172.24.56.83:8080/like";
+    private static final String LIKE_URL = "http://localhost:8080/like";
     //修改注册信息的网址
-    private static final String MODIFY_STUDENT_INFO_URL = "http://172.24.56.83:8080/modifyStudentInfo";
+    private static final String MODIFY_STUDENT_INFO_URL = "http://localhost:8080/modifyStudentInfo";
     //修改密码的网址
-    private static final String MODIFY_STUDENT_PASSWORD_URL = "http://172.24.56.83:8080/modifyPassword";
+    private static final String MODIFY_STUDENT_PASSWORD_URL = "http://localhost:8080/modifyPassword";
 
     /**
      * 学生注册的时候调用的方法
