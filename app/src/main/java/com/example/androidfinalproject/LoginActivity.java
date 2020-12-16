@@ -68,7 +68,24 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call call, Response response) throws IOException {
                     Log.e("Loginininininininin","Response");
-                    Log.d("Loginininininininin",response.toString());
+                    Log.d("Loginininininininin",response.toString()+response.body().string());
+                    String [] responseString = response.body().toString().split("\\s+");
+                    if (responseString[0].equals("Y")){
+                        HttpUtil.initUser(responseString[2],responseString[3],Integer.valueOf(responseString[4]),Integer.valueOf(responseString[1]));
+                    }
+                    else {
+                        new AlertDialog.Builder(LoginActivity.this)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setTitle("警告")
+                                .setMessage("用户名或密码错误")
+                                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        usernameTextView.setText("");
+                                        passwordTextView.setText("");
+                                    }
+
+                                }).create().show();
+                    }
                 }
             };
             HttpUtil.sendLogin(usernameTextView.getText().toString(),passwordTextView.getText().toString(),callback);

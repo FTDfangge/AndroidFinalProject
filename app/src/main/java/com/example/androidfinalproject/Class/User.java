@@ -5,7 +5,19 @@ import android.media.Image;
 public class User {
     public static User localuser = new User();
     private String username,password;
-    private String nickName,punchTime,punchDescription;
+    private String nickName;
+    private String punchTime;
+    private String punchDescription;
+
+    public String getStudentNumber() {
+        return studentNumber;
+    }
+
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
+    }
+
+    private String studentNumber;
     private Habit myHabit = new Habit();
     private int numOfPunches = 975;
 
